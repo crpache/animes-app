@@ -1,0 +1,25 @@
+export const formatAnime = animeData => {
+  return {
+    id: animeData.id,
+    slug: animeData.attributes.slug,
+    canonicalTitle: animeData.attributes.canonicalTitle,
+    posterImage: animeData.attributes.posterImage.original,
+    averageRating: animeData.attributes.averageRating,
+    favoritesCount: animeData.attributes.favoritesCount,
+    synopsis: animeData.attributes.synopsis,
+    userCount: animeData.attributes.userCount,
+    ratingRank: animeData.attributes.ratingRank,
+    ageRating: animeData.attributes.ageRating,
+    ageRatingGuide: animeData.attributes.ageRatingGuide,
+    startDate: animeData.attributes.startDate,
+    endDate: animeData.attributes.endDate,
+    status: animeData.attributes.status,
+    showType: animeData.attributes.subtype,
+    characters: animeData.relationships.characters.links.related,
+    episodesUrl: animeData.relationships.episodes.links.related,
+    episodes: [],
+    watchedEpisodes: [],
+    isFav: false,
+    isStarred: false,
+  }
+}
