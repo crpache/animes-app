@@ -4,10 +4,6 @@ import { useAnimesContext } from '../context/AnimesContext'
 export const useStarredAnimes = () => {
   const [starredAnimes, setStarredAnimes] = useState([])
   const { starredAnimes: starredAnimesIds } = useAnimesContext()
-  //const starredAnimesIds = animes.starredAnimes
-  /* const starredAnimesIds = animes
-    .filter(anime => anime.isStarred)
-    .map(anime => anime.id) */
 
   useEffect(() => {
     const starredAnimesInLS = JSON.parse(localStorage.getItem('starredAnimes'))
